@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url('/src/assets/fonts/SFPRODISPLAYREGULAR.OTF') format('.OTF');
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+}
+body {
+  min-width: 1200px;
+  background: #1e1e1e;
+}
+:root {
+  --primary-border: #4d4d4d;
+  --white: #ffffff;
+  --secondary-bg: #262626;
+  --skeleton: linear-gradient(90deg, #3c3c3c 0%, #444 51.04%, #333 100%);
+}
