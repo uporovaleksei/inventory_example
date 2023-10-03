@@ -26,6 +26,13 @@ defineProps({
   flex-direction: column;
   align-items: center;
   justify-content: center;
+	&::before{
+		content: '';
+		width: 100%;
+		height: 100%;
+		background: transparent;
+		position: absolute;
+	}
   .item__count {
     position: absolute;
     right: -2px;

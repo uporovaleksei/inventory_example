@@ -110,6 +110,7 @@ onMounted(() => {
       @dragenter.prevent
       @dragover.prevent
       @click="openModal(item)"
+			:class="{ 'dragging': itemIsDragging }"
     >
       <InventoryItem :id="item.id" :count="item.count" :src="item.src" v-if="item.filled == true" />
     </div>
@@ -147,8 +148,8 @@ onMounted(() => {
     backdrop-filter: blur(8px);
     border-radius: 0 12px 12px 0;
     transition:
-      right 0.5s,
-      opacity 0.5s;
+		right 0.5s,
+		opacity 0.5s;
     z-index: 0;
   }
   .hide {
@@ -164,6 +165,17 @@ onMounted(() => {
     justify-content: center;
     box-sizing: border-box;
   }
+	.inventory__cell .dragging{
+		width: calc(18%);
+    height: 100px;
+		border-radius: 24px;
+		background: red;
+    border: 1px solid var(--primary-border, #4d4d4d);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+	}
   .inventory__cell:first-child {
     border-top-left-radius: 12px;
   }
